@@ -3,18 +3,18 @@ Cloud platform for running and visualizing [SNOWPACK](https://www.slf.ch/en/serv
 
 # How to set up
 ## Step 1: set up VM with tljh
-- Create a Virtual Machine (VM) with the cloud provider, use Ubuntu as OS, enable http and https access.
-- ssh into the machine
-- To install tljh, pick an <admin_name> and execute:
+1. Create a Virtual Machine (VM) with the cloud provider, use Ubuntu as OS, enable http and https access.
+2. ssh into the machine
+3. To install tljh, pick an <admin_name> and execute:
   ```
   curl -L https://tljh.jupyter.org/bootstrap.py | sudo python3 - --admin <admin_name>
   ```
-	See: https://tljh.jupyter.org/en/latest/install/google.html for details and more information on how to install tljh.
+See: https://tljh.jupyter.org/en/latest/install/google.html for details and more information on how to install tljh.
 
 ## Step 2: obtaining required packages
 In the home directory of the default user, clone the snowpackCloud repository:
 ```
-git clone https://github.com/EricKeenan/snowpackCloud.git
+git clone https://github.com/nwever/snowpackCloud.git
 ```
 To install all required packages, execute:
 ```
@@ -50,9 +50,9 @@ Now compile MeteoIO and install in ```~/usr```:
 
 Now compile SNOWPACK and install in ```~/usr```:
 1. ```cd snowpack/Source/snowpack```
-2. Do step 3 and 4 as above for MeteoIO
+2. Do step 3 and 4 listed above for MeteoIO
 3. Set ```DEBUG_ARITHM``` to ```OFF``` and ```ENABLE_LAPACK``` to ```ON``` (go to the respective item and hit <enter>)
-4. Do step 6 and 7 as above for MeteoIO
+4. Do step 6 and 7 listed above for MeteoIO
 
 
 ## Step 4: Adding users
