@@ -1,0 +1,2 @@
+# Specify the path to the usr directory where MeteoIO and SNOWPACK have been installed
+path_to_snowpack_usr="/home/username/usr/"

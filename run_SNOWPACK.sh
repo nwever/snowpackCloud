@@ -1,4 +1,5 @@
 #!/bin/bash
+source settings.rc
 
 # Set variables to shell script arguments
 experiment_id=$1
@@ -24,10 +25,10 @@ cp {"${site}.smet","${site}.sno","${site}.ini","base.ini"} $experiment_id
 cd $experiment_id
 mkdir -p output
 
-# Definite paths to initialization file (.ini) and SNOWPACK binary. 
+# Definite paths to initialization file (.ini) and SNOWPACK binary.
 ini_path="${site}.ini"
-snowpack_binary_path="../../snowpack/Source/snowpack/bin/snowpack"
-export LD_LIBRARY_PATH=/home/jovyan/snowpack/Source/snowpack/lib:/home/jovyan/snowpack/Source/meteoio/lib:/home/jovyan/lib:${LD_LIBRARY_PATH}
+snowpack_binary_path="${path_to_snowpack_usr}/bin/snowpack"
+export LD_LIBRARY_PATH=${path_to_snowpack_usr}/lib/:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
 
 # Modify forcing file
@@ -55,4 +56,4 @@ sed -i "s/EXPERIMENT      =       NO_EXP/${experiment_tag_line}/g" "${site}.ini"
 $snowpack_binary_path -c ${ini_path} -e $end
 
 # Zip output directory
-../../bin/zip -r output.zip output/
+zip -r output.zip output/
