@@ -63,8 +63,8 @@ Now compile SNOWPACK and install in ```~/usr```:
 	Then, the users can log in after creating their own password and are ready to use the notebooks.
 	
   Notes:
-	- User names should be all lower case, no special characters and no spaces, to minimize the risk of issues!
-	- Deleting a user including the home directory can be done via the admin panel, followed by:
+- User names should be all lower case, no special characters and no spaces, to minimize the risk of issues!
+- Deleting a user including the home directory can be done via the admin panel, followed by:
 	```sudo userdel -r jupyter-<user>```
 
 ## During a Class
