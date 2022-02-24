@@ -62,9 +62,10 @@ Now compile SNOWPACK and install in ```~/usr```:
   execute ```bash addusers.sh```, which will add all the users to jupyter-hub and copy over the snowpackCloud directory.
 	Then, the users can log in after creating their own password and are ready to use the notebooks.
 	
-  Note:
-	Deleting a user including the home directory can be done via the admin panel, followed by:
-	```sudo userdel -r <user>```
+  Notes:
+	- User names should be all lower case, no special characters and no spaces, to minimize the risk of issues!
+	- Deleting a user including the home directory can be done via the admin panel, followed by:
+	```sudo userdel -r jupyter-<user>```
 
 ## During a Class
 1. Ideally, 1 CPU and 2 GB per student is available. Shut down the VM, change its settings, and restart. After a class, the resources
