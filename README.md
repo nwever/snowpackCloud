@@ -64,5 +64,19 @@ Now compile SNOWPACK and install in ```~/usr```:
 	Deleting a user including the home directory can be done via the admin panel, followed by:
 	```sudo userdel -r <user>```
 
+## During a Class
+1. Ideally, 1 CPU and 2 GB per student is available. Shut down the VM, change its settings, and restart. After a class, the resources
+	can be reduced again.
+2. Make sure at least 2 GB disk space is available per user. To resize a disk, follow the following steps:
+	- In the cloud web interface, navigate to "disks"
+	- Select the VM boot disk and click "Edit"
+	- Provide the new disk size and click "Save". Note that disk space is only allowed to increase.
+	- ssh into the VM
+	- Find the device in use by the VM by executing: ```sudo lsblk```.
+	- Look for a line that has as ```MOUNTPOINT``` ```/```. Most likely it is ```sda1```
+	- Resize the partition using (change partition ```sda 1``` when necessary): ```sudo growpart /dev/sda 1```
+	- Resize the file system using (change device ```sda1``` when necessary): ```sudo resize2fs /dev/sda1```
+	- Check if new space was correctly allocated by using: ```df -h```
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/EricKeenan/snowpackCloud/master)
 
