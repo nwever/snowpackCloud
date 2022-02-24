@@ -1,5 +1,5 @@
 # SNOWPACK_in_the_cloud
-Cloud platform for running and visualizing [SNOWPACK](https://www.slf.ch/en/services-and-products/snowpack.html), a numerical snow and firn model, via a Jupyter Notebook.
+Cloud platform deploying [The Littlest JupyterHub](https://tljh.jupyter.org) for running and visualizing [SNOWPACK](https://www.slf.ch/en/services-and-products/snowpack.html), a numerical snow and firn model, via a Jupyter Notebook.
 
 # How to set up
 ## Step 1: set up VM with tljh
@@ -9,6 +9,8 @@ Cloud platform for running and visualizing [SNOWPACK](https://www.slf.ch/en/serv
   ```
   curl -L https://tljh.jupyter.org/bootstrap.py | sudo python3 - --admin <admin_name>
   ```
+4. In the VM Instance panel, the external IP address is visible. The tljh is accessible via the IP address listed here. If there are accessing problems, check that http is used. By default, https does not work!
+
 See: https://tljh.jupyter.org/en/latest/install/google.html for details and more information on how to install tljh.
 
 ## Step 2: obtaining required packages
