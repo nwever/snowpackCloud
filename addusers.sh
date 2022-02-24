@@ -1,6 +1,9 @@
 # Add users listed in users.lst
-while read user
+while read u
 do
+	# Force username to be lower case
+	user=$(echo "$u" | tr '[:upper:]' '[:lower:]')
+
 	echo "Adding: ${user}"
 	# Create user on system
 	sudo useradd -s /usr/bin/bash -d /home/jupyter-${user} -m jupyter-${user}
