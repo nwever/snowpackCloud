@@ -80,10 +80,7 @@ Make sure that the full path specified in ```settings.rc``` points to the ```usr
 4. Copy the generated file ```dry_lake.smet``` to the directories with simulations:
 	- ```cp drylake.smet ../drylake/drylake.smet```
 	- ```cp drylake.smet ../drylake_tea/drylake_tea.smet```
-5. Set the start date to October 1 in the current water year for the simulations by modifying ```ProfileDate``` in the following files:
-	- ```drylake/drylake.sno```
-	- ```../drylake/standard/drylake.sno```
-
+5. Set the start date to October 1 in the current water year for the simulations by modifying ```ProfileDate``` in ```drylake/drylake.sno```.
 
 ## During a Class
 1. Ideally, 1 CPU and 2 GB per student is available. Shut down the VM, change its settings, and restart. After a class, the resources
