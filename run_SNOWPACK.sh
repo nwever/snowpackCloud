@@ -32,7 +32,7 @@ export LD_LIBRARY_PATH=${path_to_snowpack_usr}/lib/:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
 
 # Modify forcing file
-# Units multiplier 
+# Units multiplier
 um_line="units_multiplier = 1 $2 $3 $4 1 1 $5 1 $6 $7"
 sed -i "s/units_multiplier = 1 1 1 1 1 1 1 1 1 1/${um_line}/g" "${site}.smet"
 um_line="units_multiplier = 1 $2 $3 $4 $6 $7 $5"
