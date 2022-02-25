@@ -61,18 +61,8 @@ Now compile SNOWPACK and install in ```~/usr```:
 ### Finalize
 Make sure that the full path specified in ```settings.rc``` points to the ```usr/``` directory, where MeteoIO and SNOWPACK are installed.
 
-## Step 4: Adding users
-  In the directory ```snowpackCloud```, modify the list of users in the file ```users.lst``` with the users to be created. Then 
-  execute ```bash addusers.sh``` which will add all the users to jupyter-hub and copy over the snowpackCloud directory.
-	Then, the users can log in after creating their own password and are ready to use the notebooks.
-	
-  Notes:
-- User names should be all lower case, no special characters and no spaces, to minimize the risk of issues!
-- Deleting a user including the home directory can be done via the admin panel, followed by:
-	```sudo userdel -r jupyter-<user>```
 
-
-## Step 5: Update Dry Lake example run (optional)
+## Step 4: Update Dry Lake example run (optional)
 1. To update the Dry Lake example, navigate to the directory ```update_drylake```
 2. The script ```retrieve_data.sh``` can be used to download the SNOTEL data for site 457 (Dry Lake).
 	Before executing the script, check the years for which you want to download data. Note that the query is different for the current water year versus historical data.
@@ -81,6 +71,19 @@ Make sure that the full path specified in ```settings.rc``` points to the ```usr
 	- ```cp drylake.smet ../drylake/drylake.smet```
 	- ```cp drylake.smet ../drylake_tea/drylake_tea.smet```
 5. Set the start date to October 1 in the current water year for the simulations by modifying ```ProfileDate``` in ```drylake/drylake.sno```.
+
+	
+## Step 5: Adding users
+  In the directory ```snowpackCloud```, modify the list of users in the file ```users.lst``` with the users to be created. Then 
+  execute ```bash addusers.sh``` which will add all the users to jupyter-hub and copy over the snowpackCloud directory.
+	Then, the users can log in after creating their own password and are ready to use the notebooks.
+	
+  Notes:
+- User names should be all lower case, no special characters and no spaces, to minimize the risk of issues!
+- Make sure that you do this as a last step when everything else is sorted out! The snowpackCloud directory from the user executing ```addusers.sh``` will be deployed to all users, and changes after deployment requires manual updating for all the users added in this step!
+- Deleting a user including the home directory can be done via the admin panel, followed by:
+	```sudo userdel -r jupyter-<user>```
+
 
 ## During a Class
 1. Ideally, 1 CPU and 2 GB per student is available. Shut down the VM, change its settings, and restart. After a class, the resources
