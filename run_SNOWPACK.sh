@@ -21,7 +21,10 @@ site=${15}
 # Set up simulation folder for each unique exerpiment_id.
 cd ${site}
 mkdir -p ${experiment_id}
-cp {"${site}.smet","${site}.sno","${site}.ini","base.ini"} $experiment_id
+cp {"${site}.smet","${site}.sno","${site}.ini"} $experiment_id
+if [ -e "base.ini" ]; then
+	cp "base.ini" $experiment_id
+fi
 cd $experiment_id
 mkdir -p output
 
