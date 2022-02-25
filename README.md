@@ -40,6 +40,7 @@ Create a usr directory:
 ```
 mkdir ~/usr/
 ```
+### MeteoIO
 Now compile MeteoIO and install in ```~/usr```:
 
 1. ```cd snowpack/Source/meteoio```
@@ -50,12 +51,15 @@ Now compile MeteoIO and install in ```~/usr```:
 6. Hit [c], [c] and [g] to configure and generate
 7. ```make install```
 
+### SNOWPACK
 Now compile SNOWPACK and install in ```~/usr```:
 1. ```cd snowpack/Source/snowpack```
 2. Do step 3 and 4 listed above for MeteoIO
 3. Set ```DEBUG_ARITHM``` to ```OFF``` and ```ENABLE_LAPACK``` to ```ON``` (go to the respective item and hit <enter>)
 4. Do step 6 and 7 listed above for MeteoIO
 
+### Finalize
+Make sure that the full path specified in ```settings.rc``` points to the ```usr/``` directory, where MeteoIO and SNOWPACK are installed.
 
 ## Step 4: Adding users
   In the directory ```snowpackCloud```, modify the list of users in the file ```users.lst``` with the users to be created. Then 
