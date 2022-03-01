@@ -99,6 +99,9 @@ Make sure that the full path specified in ```settings.rc``` points to the ```usr
 	- Resize the partition using (change partition ```sda 1``` when necessary): ```sudo growpart /dev/sda 1```
 	- Resize the file system using (change device ```sda1``` when necessary): ```sudo resize2fs /dev/sda1```
 	- Check if new space was correctly allocated by using: ```df -h```
+3. In case you want to distribute a file to all jupyter users, the command below prints the commands to be executed to achieve that for file ```f=<file>```(f=Lab_4.ipynb in this example):
+
+```f=Lab_4.ipynb; for u in /home/jupyter-*; do uu=$(echo ${u} | sed 's/\/home\///'); echo "sudo cp -p ${f} ${u}/${f} && sudo chown ${uu}:${uu} ${u}/${f}"; done```
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/EricKeenan/snowpackCloud/master)
 
