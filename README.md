@@ -10,6 +10,7 @@ Cloud platform deploying [The Littlest JupyterHub](https://tljh.jupyter.org) for
   curl -L https://tljh.jupyter.org/bootstrap.py | sudo python3 - --admin <admin_name>
   ```
 4. In the VM Instance panel, the external IP address is visible. The tljh is accessible via the IP address listed here. If there are accessing problems, check that http is used. By default, https does not work!
+5. Reserve the external IP address, by navigating to VPC network --> External IP addresses. This ensures that the same IP address can be used when the server is rebooted.
 
 See: https://tljh.jupyter.org/en/latest/install/google.html for details and more information on how to install tljh.
 
