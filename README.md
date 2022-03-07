@@ -68,10 +68,12 @@ Make sure that the full path specified in ```settings.rc``` points to the ```usr
 2. The script ```retrieve_data.sh``` can be used to download the SNOTEL data for site 457 (Dry Lake).
 	Before executing the script, check the years for which you want to download data. Note that the query is different for the current water year versus historical data.
 3. After executing ```bash retrieve_data.sh``` to download the SNOTEL data, execute ```bash make_smet.sh``` to create the smet file with input data.
-4. Copy the generated file ```dry_lake.smet``` to the directories with simulations:
+4. Copy the generated ```*.smet```-files to the directories with simulations:
 	- ```cp drylake.smet ../drylake/drylake.smet```
 	- ```cp drylake.smet ../drylake_tea/drylake_tea.smet```
-5. Set the start date to October 1 in the current water year for the simulations by modifying ```ProfileDate``` in ```drylake/drylake.sno```.
+	- ```cp lakeeldora.smet ../drylake_tea/lakeeldora.smet```
+5. Set the start date to October 1 in the current water year for the simulations by modifying ```ProfileDate``` in ```drylake/drylake.sno``` and ```drylake_tea/drylake_tea.sno```.
+6. Modify the file ```PSUM::arg2::when     = 2022-03-03T12:00```
 
 	
 ## Step 5: Adding users
