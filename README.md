@@ -73,8 +73,14 @@ Make sure that the full path specified in ```settings.rc``` points to the ```usr
 	- ```cp drylake.smet ../drylake_tea/drylake_tea.smet```
 	- ```cp lakeeldora.smet ../drylake_tea/lakeeldora.smet```
 5. Set the start date to October 1 in the current water year for the simulations by modifying ```ProfileDate``` in ```drylake/drylake.sno``` and ```drylake_tea/drylake_tea.sno```.
-6. Modify the file ```PSUM::arg2::when     = 2022-03-03T12:00```
-
+6. Add the timestamp of the tea experiment in the file ```drylake_tea.ini```, for example:
+	```
+	# ENTER THE TIMESTAMP OF THE TEA EXPERIMENT BELOW:
+	PSUM_PH::arg1::when  = 2022-03-03T12:00
+	PSUM::arg1::when     = 2022-03-03T12:00
+	PSUM::arg2::when     = 2022-03-03T12:00
+	```
+	Make sure that the timestamp falls within the available observational data, downloaded at step 2.
 	
 ## Step 5: Adding users
   In the directory ```snowpackCloud```, modify the list of users in the file ```users.lst``` with the users to be created. Then 
