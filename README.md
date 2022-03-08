@@ -95,9 +95,9 @@ Make sure that the full path specified in ```settings.rc``` points to the ```usr
 
 
 ## During a Class
-1. Ideally, 1 CPU and 2 GB per student is available. Shut down the VM, change its settings, and restart. After a class, the resources
-	can be reduced again.
-2. Make sure at least 2 GB disk space is available per user. To resize a disk, follow the following steps:
+1. Ideally, 1 CPU and at least 2 GB per student is available. Shut down the VM, change its settings, and restart. After a class, the resources
+	can be reduced again. Use the Admin panel from the Jupyter admin user to see if users all still working (have a running server).
+2. Make sure the disk space is 10 GB for the operating system plus at least around 2 GB per user (users use around 1GB on average) plus some additional buffer. To resize a disk, follow these steps:
 	- In the cloud web interface, navigate to "disks"
 	- Select the VM boot disk and click "Edit"
 	- Provide the new disk size and click "Save". Note that disk space is only allowed to increase.
